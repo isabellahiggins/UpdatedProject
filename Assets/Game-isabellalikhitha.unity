@@ -6447,6 +6447,9 @@ MonoBehaviour:
   scoreText: {fileID: 1555060553}
   GameRestartText: {fileID: 802417503}
   YouWinText: {fileID: 1872997089}
+  dog: {fileID: 740980106}
+  farmer: {fileID: 0}
+  winDistance: 2
 --- !u!4 &707851249
 Transform:
   m_ObjectHideFlags: 0

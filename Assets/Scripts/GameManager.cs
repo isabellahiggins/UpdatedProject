@@ -18,11 +18,18 @@ public class GameManager : MonoBehaviour
         GameRestartText.gameObject.SetActive(false); // Ensure Game Restart text is hidden initially
         YouWinText.gameObject.SetActive(false); // Ensure "You Win!" text is hidden initially
     }
+
     public void UpdateScore(int scoreToAdd)
     {
         // Increase the score
         score += scoreToAdd;
         scoreText.text = "Score = " + score;
+
+        // Cthe score is greater than or equal to 100
+        if (score >= 100) 
+        {
+            DisplayWinText(); //display "You Win!" text
+        }
     }
 
     public void GameOver()
@@ -47,3 +54,4 @@ public class GameManager : MonoBehaviour
         YouWinText.gameObject.SetActive(true);
     }
 }
+

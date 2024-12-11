@@ -10,11 +10,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI YouWinText; // Reference to "You Win" text UI
     private int score;
 
+    public Transform dog; // Reference to the dog's transform
+    public Transform farmer; // Reference to the farmer's transform
+    public float winDistance = 2f; // Distance at which the dog reaches the farmer
+
     // Start is called before the first frame update
     void Start()
     {
-        score = 0;
-        scoreText.text = "Score: " + score;
+        score = 0; // Initialize the score
+        scoreText.text = "Score: " + score; // Update the score UI
         GameRestartText.gameObject.SetActive(false); // Ensure Game Restart text is hidden initially
         YouWinText.gameObject.SetActive(false); // Ensure "You Win!" text is hidden initially
     }
@@ -23,13 +27,7 @@ public class GameManager : MonoBehaviour
     {
         // Increase the score
         score += scoreToAdd;
-        scoreText.text = "Score = " + score;
-
-        // Cthe score is greater than or equal to 100
-        if (score >= 100) 
-        {
-            DisplayWinText(); //display "You Win!" text
-        }
+        scoreText.text = "Score = " + score; // Update the score UI
     }
 
     public void GameOver()
@@ -53,5 +51,16 @@ public class GameManager : MonoBehaviour
         // Show the "You Win!" text
         YouWinText.gameObject.SetActive(true);
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Check if the dog is close enough to the farmer
+        if (Vector3.Distance(dog.position, farmer.position) <= winDistance)
+        {
+            DisplayWinText(); // Show "You Win!" text when dog reaches the farmer
+        }
+    }
 }
+
 

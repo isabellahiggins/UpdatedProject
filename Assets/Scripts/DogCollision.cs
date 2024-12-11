@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +9,7 @@ public class DogCollision : MonoBehaviour
     // Camera position
     public Transform cameraTransform;
 
-    public GameManager gameManager; // Reference to GameManager to call GameRestart
+    public GameManager gameManager; // Reference to GameManager to call GameOver
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,8 +19,8 @@ public class DogCollision : MonoBehaviour
             // Set him back to the starting position if he hits the obstacle
             transform.position = startingPosition;
 
-            // Call GameRestart to show "Game Restart" text
-            gameManager.GameOver();  // Call to show the "Game Restart" text
+            // Call GameOver to show "Game Restart" text
+            gameManager.GameOver(); // Call GameOver to show the Game Restart text
 
             // Adjust the camera position to look at the dog
             if (cameraTransform != null)

@@ -1,0 +1,3 @@
+Isabella - Map Design, UI Design , DogCollision, Fence Collision, DetectCollision, GameManager Scripts 
+
+Likhitha - Assets and PlayerController Script, Followplayer Script, Audio, Text UI elements - from Gamemanager, FenceCollision and DogCollision

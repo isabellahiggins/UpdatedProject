@@ -27,9 +27,10 @@ Dog (Player)
 Farmer (Owner)
 --------------------------------
 Scripts - https://learn.unity.com/  (Challenge 2 & 5)
+-------------------------------------------------
 DetectCollisions.cs - Strawberries are detected by the dog and updates score by 5
 
-DogCollisiosn.cs  - Collisions between the Player and Obstacles and calls the "Game Restart " Method when Dog respawns back in position
+DogCollision.cs  - Collisions between the Player and Obstacles and calls the "Game Restart " Method when Dog respawns back in position
 
 FollowPlayer.cs - The direction of the camera facing the Player from behind, making the camera look down on the player
 
